@@ -4,6 +4,7 @@ import Navbar from "@/components/navbar";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Footer from "@/components/footer";
+import FloatingContact from "@/components/ui/floating-contact";
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 const playfair = Playfair_Display({
@@ -49,6 +50,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <FloatingContact />
       </body>
     </html>
   );

@@ -51,9 +51,9 @@ export default function Steps() {
               >
                 {/* Step Content Card */}
                 <div className="w-full lg:w-[45%]">
-                  <div className="rounded-sm border-2 border-dashed border-white/20 bg-white/5 p-8 backdrop-blur-sm transition-colors hover:border-white/40">
-                    <h3 className="mb-4 text-2xl font-bold text-white">{step.title}</h3>
-                    <p className="text-[15px] leading-relaxed text-white/70">
+                  <div className="rounded-sm border-2 border-dashed border-black/20 bg-white p-8 backdrop-blur-sm transition-colors hover:border-black/40">
+                    <h3 className="mb-4 text-2xl font-bold text-black">{step.title}</h3>
+                    <p className="text-[15px] leading-relaxed text-black/70">
                       {step.desc}
                     </p>
                   </div>

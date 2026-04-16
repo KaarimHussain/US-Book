@@ -64,7 +64,7 @@ export default function PortfolioGrid() {
                      <span className="text-sm font-medium text-muted-foreground">
                         Showing {filteredBooks.length} titles
                      </span>
-                  </div>x
+                  </div>
                   {/* Filter Section */}
                   <div className="mb-12 flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between border-b border-border pb-8">
                      <div className="flex flex-wrap gap-2">

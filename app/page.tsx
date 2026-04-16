@@ -6,7 +6,6 @@ import Details from "@/components/home/details";
 import Services from "@/components/home/services";
 import BannerCards from "@/components/home/banner-cards";
 import Steps from "@/components/home/steps";
-import CTA from "@/components/home/cta";
 import Testimonials from "@/components/home/testimonials";
 import FAQ from "@/components/home/faq";
 import ContactForm from "@/components/home/contact-form";
@@ -25,7 +24,6 @@ export default function Home() {
       <Testimonials />
       <FAQ />
       <ContactForm />
-      {/* <CTA /> */}
     </main>
   );
 }
