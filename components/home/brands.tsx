@@ -28,6 +28,7 @@ export default function Brands() {
                   src={logo}
                   alt={`Partner Brand ${idx + 1}`}
                   fill
+                  sizes="160px"
                   className="object-contain"
                 />
               </div>

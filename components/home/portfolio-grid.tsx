@@ -5,7 +5,6 @@ import Image from "next/image";
 import { Star, Search } from "lucide-react";
 import { books } from "@/data/books";
 import { cn } from "@/lib/utils";
-import { BookCover } from 'book-cover-3d'
 import { Input } from "@/components/ui/input";
 
 export default function PortfolioGrid() {
@@ -41,7 +40,7 @@ export default function PortfolioGrid() {
                      {sidebarBooks.map((book) => (
                         <div key={book.id} className="flex gap-4 p-5 transition-colors hover:bg-muted/30">
                            <div className="relative h-24 w-16 shrink-0 shadow-md">
-                              <Image src={book.image} alt={book.title} fill className="object-contain" />
+                              <Image src={book.image} alt={book.title} fill sizes="64px" className="object-contain" />
                            </div>
                            <div className="flex flex-col justify-between py-1">
                               <div>
@@ -99,10 +98,10 @@ export default function PortfolioGrid() {
                      <div className="grid grid-cols-2 gap-x-12 gap-y-16 md:grid-cols-4">
                         {filteredBooks.map((book) => (
                            <div key={book.id} className="group space-y-4">
-                              <div className="relative transition-transform duration-500 group-hover:-translate-y-2">
-                                 <BookCover>
-                                    <img src={book.image.src} alt={book.title} />
-                                 </BookCover>
+                              <div className="relative transition-transform duration-500 group-hover:-translate-y-2" style={{ perspective: '600px' }}>
+                                 <div className="relative w-full" style={{ aspectRatio: '2/3', transformStyle: 'preserve-3d', transform: 'rotateY(-15deg)', transition: 'transform 0.4s ease' }}>
+                                    <Image src={book.image} alt={book.title} fill sizes="(max-width: 768px) 40vw, 20vw" className="object-cover rounded-sm shadow-xl" />
+                                 </div>
                               </div>
                               <div className="space-y-1 px-1 text-center sm:text-left">
                                  <div className="flex items-center justify-center sm:justify-start gap-0.5 text-accent">

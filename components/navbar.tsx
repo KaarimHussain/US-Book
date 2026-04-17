@@ -55,7 +55,7 @@ export default function Navbar() {
       <div className="container mx-auto flex h-20 items-center justify-between px-6 lg:px-12">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <Image src={Logo} alt="Logo" width={150} />
+          <Image src={Logo} alt="Logo" width={150} priority />
         </Link>
 
         {/* Desktop Navigation */}

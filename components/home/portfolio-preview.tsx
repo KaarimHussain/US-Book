@@ -74,6 +74,7 @@ export default function PortfolioPreview() {
                     src={item.image}
                     alt={item.title}
                     fill
+                    sizes="270px"
                     className="object-cover"
                   />
                 </div>
