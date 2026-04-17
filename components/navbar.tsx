@@ -22,27 +22,27 @@ const serviceCategories = [
     title: "Writing Services",
     icon: <PenTool className="size-4" />,
     items: [
-      { name: "Book Writing", desc: "Turn your ideas into a complete manuscript." },
-      { name: "Ghostwriting", desc: "Your story, our words. Professional secrecy." },
-      { name: "Editing & Proofreading", desc: "Polish your work to perfection." },
+      { name: "Book Writing", desc: "Turn your ideas into a complete manuscript.", href: "/services/book-writing" },
+      { name: "Ghostwriting", desc: "Your story, our words. Professional secrecy.", href: "/services/ghostwriting" },
+      { name: "Editing & Proofreading", desc: "Polish your work to perfection.", href: "/services/editing-and-proofreading" },
     ]
   },
   {
     title: "Publishing & Design",
     icon: <Layout className="size-4" />,
     items: [
-      { name: "Book Cover Design", desc: "Visuals that capture the heart of your story." },
-      { name: "Formatting", desc: "Interior design for print and digital devices." },
-      { name: "Publishing Assistance", desc: "Navigate KDP, IngramSpark, and more." },
+      { name: "Book Cover Design", desc: "Visuals that capture the heart of your story.", href: "/services/book-cover-design" },
+      { name: "Formatting", desc: "Interior design for print and digital devices.", href: "/services/formatting" },
+      { name: "Publishing Assistance", desc: "Navigate KDP, IngramSpark, and more.", href: "/services/publishing-assistance" },
     ]
   },
   {
     title: "Author Growth",
     icon: <Rocket className="size-4" />,
     items: [
-      { name: "Book Marketing", desc: "Strategies to reach the bestseller lists." },
-      { name: "Author Website", desc: "Your digital home as a professional author." },
-      { name: "Public Relations", desc: "Get featured in news and literary media." },
+      { name: "Book Marketing", desc: "Strategies to reach the bestseller lists.", href: "/services/book-marketing" },
+      { name: "Author Website", desc: "Your digital home as a professional author.", href: "/services/author-website" },
+      { name: "Public Relations", desc: "Get featured in news and literary media.", href: "/services/public-relations" },
     ]
   }
 ];
@@ -92,7 +92,7 @@ export default function Navbar() {
                           {category.items.map((item) => (
                             <Link
                               key={item.name}
-                              href="#"
+                              href={item.href}
                               className="group flex flex-col gap-0.5 rounded-md p-2 transition-colors hover:bg-muted"
                             >
                               <span className="text-sm font-bold text-foreground transition-colors group-hover:text-accent">
@@ -114,14 +114,6 @@ export default function Navbar() {
                 <NavigationMenuLink asChild>
                   <Link href="/portfolio" className={cn(navigationMenuTriggerStyle(), "bg-transparent font-medium")}>
                     Portfolio
-                  </Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <NavigationMenuLink asChild>
-                  <Link href="/pricing" className={cn(navigationMenuTriggerStyle(), "bg-transparent font-medium")}>
-                    Pricing
                   </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
@@ -157,17 +149,29 @@ export default function Navbar() {
       {isMobileMenuOpen && (
         <div className="absolute top-20 left-0 w-full bg-background border-b border-border p-6 md:hidden animate-in slide-in-from-top-5 duration-300">
           <div className="flex flex-col gap-4">
-            {["Home", "About Us", "Services", "Portfolio", "Pricing", "Contact"].map((link) => (
+            {[
+              { name: "Home", href: "/" },
+              { name: "About Us", href: "/about" },
+              { name: "Portfolio", href: "/portfolio" },
+              { name: "Contact", href: "/contact" },
+            ].map((link) => (
               <Link
-                key={link}
-                href="#"
+                key={link.name}
+                href={link.href}
                 className="text-lg font-medium text-foreground hover:text-primary"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                {link}
+                {link.name}
               </Link>
             ))}
-            <Button className="mt-4 w-full font-bold">
+            <Button
+              className="mt-4 w-full font-bold"
+              onClick={() => {
+                const element = document.getElementById("contact-section");
+                if (element) element.scrollIntoView({ behavior: "smooth" });
+                setIsMobileMenuOpen(false);
+              }}
+            >
               Get Free Consultation
             </Button>
           </div>

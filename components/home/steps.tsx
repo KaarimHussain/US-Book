@@ -1,6 +1,18 @@
 import { cn } from "@/lib/utils";
 
-const steps = [
+interface StepData {
+  number: string;
+  title: string;
+  desc: string;
+}
+
+interface StepsProps {
+  title?: string;
+  subtitle?: string;
+  customSteps?: StepData[];
+}
+
+const defaultSteps = [
   {
     number: "01",
     title: "Discovery & Planning",
@@ -23,15 +35,21 @@ const steps = [
   },
 ];
 
-export default function Steps() {
+export default function Steps({ 
+  title = "Explained Simply and Clearly", 
+  subtitle = "The Complete Author Website Design Process",
+  customSteps 
+}: StepsProps) {
+  const displaySteps = customSteps || defaultSteps;
+
   return (
     <section className="bg-accent py-24 lg:py-32 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12">
         {/* Header */}
         <div className="mb-20 text-center space-y-4">
-          <p className="font-heading text-xl italic text-primary-foreground/80">The Complete Author Website Design Process</p>
+          <p className="font-heading text-xl italic text-primary-foreground/80">{subtitle}</p>
           <h2 className="text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
-            Explained Simply and Clearly
+            {title}
           </h2>
         </div>
 
@@ -41,7 +59,7 @@ export default function Steps() {
           <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 border-l border-dashed border-white/30 hidden lg:block" />
 
           <div className="space-y-12 lg:space-y-0">
-            {steps.map((step, idx) => (
+            {displaySteps.map((step, idx) => (
               <div 
                 key={idx} 
                 className={cn(
