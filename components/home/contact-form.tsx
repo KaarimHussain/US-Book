@@ -13,7 +13,7 @@ export default function ContactForm() {
 
           {/* Left: Illustration (Ultra-Compact) */}
           <div className="order-2 lg:order-1 flex items-center justify-center">
-            <div className="relative aspect-square w-full max-w-[380px]">
+            <div className="relative aspect-square w-full max-w-[700px]">
               <div className="absolute inset-0 bg-accent/10 blur-[80px] rounded-full" />
               <Image
                 src={illustration}

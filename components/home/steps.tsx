@@ -15,83 +15,70 @@ interface StepsProps {
 const defaultSteps = [
   {
     number: "01",
-    title: "Discovery & Planning",
-    desc: "The first step is to review your brand, goals, visions, and target audience that can benefit us, to decide how your site should support your identity as an author.",
+    title: "Discovery",
+    desc: "Review your brand, goals, and target audience to define your author identity.",
   },
   {
     number: "02",
-    title: "Design & Layout",
-    desc: "Our design team creates a visually compelling layout with user-friendly navigation, highlighting your books, bio, and any essential features that represent your unique style as an author.",
+    title: "Design",
+    desc: "Create a visually compelling layout highlighting your unique style.",
   },
   {
     number: "03",
-    title: "Development & Integration",
-    desc: "We develop the website with high-performance coding, integrating essential features like book showcases, contact forms, e-commerce options, and email sign-ups for maximum engagement.",
+    title: "Build",
+    desc: "Develop with high-performance code and essential author integrations.",
   },
   {
     number: "04",
-    title: "Testing & Launch",
-    desc: "Before launching, we thoroughly test the website for speed, responsiveness, and compatibility. Once approved, we go live and offer post-launch support to ensure optimal functionality.",
+    title: "Launch",
+    desc: "Thorough testing and deployment with dedicated post-launch support.",
   },
 ];
 
-export default function Steps({ 
-  title = "Explained Simply and Clearly", 
-  subtitle = "The Complete Author Website Design Process",
-  customSteps 
+export default function Steps({
+  title = "Our Simple Process",
+  subtitle = "Author Website Design",
+  customSteps
 }: StepsProps) {
   const displaySteps = customSteps || defaultSteps;
 
   return (
-    <section className="bg-accent py-24 lg:py-32 overflow-hidden">
+    <section className="bg-accent py-14 lg:py-20 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12">
-        {/* Header */}
-        <div className="mb-20 text-center space-y-4">
-          <p className="font-heading text-xl italic text-primary-foreground/80">{subtitle}</p>
-          <h2 className="text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
+        {/* Header - Compact */}
+        <div className="mb-12 text-center">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary-foreground/60 mb-2">{subtitle}</p>
+          <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
             {title}
           </h2>
         </div>
 
-        {/* Timeline Container */}
-        <div className="relative mx-auto max-w-5xl">
-          {/* Central Line (Desktop Only) */}
-          <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 border-l border-dashed border-white/30 hidden lg:block" />
-
-          <div className="space-y-12 lg:space-y-0">
-            {displaySteps.map((step, idx) => (
-              <div 
-                key={idx} 
-                className={cn(
-                  "relative flex flex-col items-center lg:flex-row lg:justify-between",
-                  idx % 2 === 0 ? "lg:flex-row-reverse" : ""
-                )}
-              >
-                {/* Step Content Card */}
-                <div className="w-full lg:w-[45%]">
-                  <div className="rounded-sm border-2 border-dashed border-black/20 bg-white p-8 backdrop-blur-sm transition-colors hover:border-black/40">
-                    <h3 className="mb-4 text-2xl font-bold text-black">{step.title}</h3>
-                    <p className="text-[15px] leading-relaxed text-black/70">
-                      {step.desc}
-                    </p>
-                  </div>
+        {/* Interactive Grid with Gradients - High Contrast */}
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {displaySteps.map((step, idx) => (
+            <div
+              key={idx}
+              className="group relative bg-white border border-black/5 p-8 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-black/5 rounded"
+            >
+              {/* Dynamic Gradient Badge */}
+              <div className="relative mb-8 inline-block">
+                <div className="absolute inset-0 bg-linear-to-r from-accent to-primary blur-md opacity-20" />
+                <div className="relative flex h-14 w-14 items-center justify-center bg-linear-to-br from-accent to-primary text-xl font-black text-white shadow-xl transition-transform duration-500 group-hover:-rotate-12 rounded">
+                  {step.number}
                 </div>
-
-                {/* Step Number Circle */}
-                <div className="relative z-10 my-6 flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-white text-lg font-bold text-primary shadow-xl lg:my-0 lg:absolute lg:left-1/2 lg:-translate-x-1/2">
-                   {step.number}
-                   {/* Pointy Arrow indicator */}
-                   <div className={cn(
-                     "absolute top-1/2 -translate-y-1/2 border-8 border-transparent hidden lg:block",
-                     idx % 2 === 0 ? "right-full border-r-white" : "left-full border-l-white"
-                   )} />
-                </div>
-
-                {/* Spacer for alternating layout */}
-                <div className="hidden w-full lg:block lg:w-[45%]" />
               </div>
-            ))}
-          </div>
+
+              <h3 className="mb-4 text-xl font-black text-black transition-colors group-hover:text-primary">
+                {step.title}
+              </h3>
+              <p className="text-sm font-medium leading-relaxed text-black/60 transition-colors group-hover:text-black/80">
+                {step.desc}
+              </p>
+
+              {/* Decorative Mesh Accent */}
+              <div className="absolute -bottom-1 -right-1 h-20 w-20 bg-linear-to-br from-primary/10 to-accent/10 blur-3xl rounded-full opacity-0 transition-opacity duration-700 group-hover:opacity-100" />
+            </div>
+          ))}
         </div>
       </div>
     </section>

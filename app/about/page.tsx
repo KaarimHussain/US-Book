@@ -1,18 +1,16 @@
-import AboutHero from "@/components/about/about-hero";
-import OurStory from "@/components/about/our-story";
-import Values from "@/components/about/values";
+import AboutMainHero from "@/components/about/about-main-hero";
+import WhoWeAre from "@/components/about/who-we-are";
+import WhyChooseUs from "@/components/about/why-choose-us";
+import AboutHistory from "@/components/about/about-history";
 import ContactForm from "@/components/home/contact-form";
-import CTA from "@/components/home/cta";
-import Testimonials from "@/components/home/testimonials";
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen">
-      <AboutHero />
-      <OurStory />
-      <Values />
-      <CTA />
-      <Testimonials />
+    <main className="min-h-screen font-sans">
+      <AboutMainHero />
+      <WhoWeAre />
+      <WhyChooseUs />
+      <AboutHistory />
       <ContactForm />
     </main>
   );

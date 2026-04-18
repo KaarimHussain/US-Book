@@ -33,8 +33,8 @@ const writingSteps = [
 
 export default function BookWritingPage() {
   return (
-    <main className="min-h-screen">
-      <ServiceHero 
+    <main className="min-h-screen ">
+      <ServiceHero
         tag="Writing Services"
         title={<>Masterful <span className="text-accent italic font-medium">Book Writing</span> Services</>}
         subtitle="Turn your vision into a literary legacy with our elite ghostwriting and editorial team."
@@ -45,46 +45,46 @@ export default function BookWritingPage() {
       <GenreGrid />
 
       {/* Existing Feature Section with context */}
-      <section className="bg-white py-24 lg:py-32">
+      <section className="bg-white py-10 lg:py-15">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-             <div className="space-y-8">
-                <div className="space-y-4">
-                  <h2 className="font-heading text-4xl font-bold text-primary md:text-5xl">Your Voice, Our <br /> <span className="text-accent italic">Exceptional</span> Craft</h2>
-                  <div className="h-1 w-20 bg-accent" />
-                </div>
-                <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
-                  <p>
-                    Writing a book is a monumental journey. At US Book Authors, we provide the 
-                    expert guidance and masterful prose needed to navigate that path successfully. 
-                    Whether you have a fully formed concept or just a spark of inspiration, 
-                    our ghostwriters are trained to capture your essence perfectly.
-                  </p>
-                  <ul className="space-y-3">
-                    <li className="flex items-center gap-3 text-primary font-medium">
-                       <span className="size-1.5 rounded-full bg-accent" />
-                       Bestseller-Grade Ghostwriting
-                    </li>
-                    <li className="flex items-center gap-3 text-primary font-medium">
-                       <span className="size-1.5 rounded-full bg-accent" />
-                       In-Depth Research & Interviews
-                    </li>
-                    <li className="flex items-center gap-3 text-primary font-medium">
-                       <span className="size-1.5 rounded-full bg-accent" />
-                       Complete Narrative Structuring
-                    </li>
-                  </ul>
-                </div>
-             </div>
-             
-             <div className="relative aspect-square lg:aspect-[4/5] bg-muted overflow-hidden rounded-sm shadow-2xl">
-                <Image 
-                  src={writerImg} 
-                  alt="Book Writing Process" 
-                  fill 
-                  className="object-cover" 
-                />
-             </div>
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <h2 className="font-heading text-4xl font-bold text-primary md:text-5xl">Your Voice, Our <br /> <span className="text-accent italic">Exceptional</span> Craft</h2>
+                <div className="h-1 w-20 bg-accent" />
+              </div>
+              <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
+                <p>
+                  Writing a book is a monumental journey. At US Book Authors, we provide the
+                  expert guidance and masterful prose needed to navigate that path successfully.
+                  Whether you have a fully formed concept or just a spark of inspiration,
+                  our ghostwriters are trained to capture your essence perfectly.
+                </p>
+                <ul className="space-y-3">
+                  <li className="flex items-center gap-3 text-primary font-medium">
+                    <span className="size-1.5 rounded-full bg-accent" />
+                    Bestseller-Grade Ghostwriting
+                  </li>
+                  <li className="flex items-center gap-3 text-primary font-medium">
+                    <span className="size-1.5 rounded-full bg-accent" />
+                    In-Depth Research & Interviews
+                  </li>
+                  <li className="flex items-center gap-3 text-primary font-medium">
+                    <span className="size-1.5 rounded-full bg-accent" />
+                    Complete Narrative Structuring
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="relative aspect-square lg:aspect-[4/5] overflow-hidden">
+              <Image
+                src={writerImg}
+                alt="Book Writing Process"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -92,7 +92,7 @@ export default function BookWritingPage() {
       {/* Unique Section 2: Dark High-Impact Ghostwriting */}
       <GhostwritingFeature />
 
-      <Steps 
+      <Steps
         title="Our Masterful Writing Lifecycle"
         subtitle="From Inspiration to Manuscript"
         customSteps={writingSteps}

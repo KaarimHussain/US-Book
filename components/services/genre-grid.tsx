@@ -25,7 +25,7 @@ const genres = [
 
 export default function GenreGrid() {
   return (
-    <section className="bg-muted/50 py-24 lg:py-32">
+    <section className="bg-muted/50 py-10 lg:py-15">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex flex-col lg:flex-row gap-16">
           {/* Sticky Header Side */}
@@ -33,7 +33,7 @@ export default function GenreGrid() {
             <span className="text-accent font-bold uppercase tracking-widest text-xs">Our Versatility</span>
             <h2 className="font-heading text-4xl font-bold text-primary leading-tight">Masters of Every <span className="text-accent italic">Literary</span> Landscape</h2>
             <p className="text-muted-foreground leading-relaxed">
-              We don't believe in one-size-fits-all. Our writing team is divided into 
+              We don't believe in one-size-fits-all. Our writing team is divided into
               specialized hubs, each dedicated to the unique nuances of their chosen genre.
             </p>
           </div>
@@ -41,13 +41,13 @@ export default function GenreGrid() {
           {/* Grid Side */}
           <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-4">
             {genres.map((genre, idx) => (
-              <div 
+              <div
                 key={genre.title}
                 className="bg-white p-10 border border-border hover:border-accent/40 transition-all group relative overflow-hidden h-full flex flex-col justify-between"
               >
                 {/* Decorative corner accent */}
                 <div className="absolute top-0 right-0 size-2 bg-accent/20 group-hover:bg-accent transition-colors" />
-                
+
                 <div className="space-y-6">
                   <div className="text-accent bg-accent/5 size-12 flex items-center justify-center rounded-sm">
                     {genre.icon}
@@ -56,10 +56,6 @@ export default function GenreGrid() {
                   <p className="text-muted-foreground leading-relaxed">
                     {genre.desc}
                   </p>
-                </div>
-
-                <div className="pt-8 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-accent opacity-0 group-hover:opacity-100 transition-opacity">
-                   Learn More <span className="h-px w-8 bg-accent" />
                 </div>
               </div>
             ))}

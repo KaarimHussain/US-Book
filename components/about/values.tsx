@@ -25,21 +25,23 @@ const values = [
 
 export default function Values() {
   return (
-    <section className="bg-primary py-24 lg:py-32">
-      <div className="container mx-auto px-6 lg:px-12 text-center space-y-20">
+    <section className="bg-primary py-20 lg:py-24">
+      <div className="container mx-auto px-6 lg:px-12 text-center space-y-16">
         <div className="max-w-3xl mx-auto space-y-4">
           <h2 className="font-heading text-4xl font-bold text-white md:text-5xl">Our Publishing Pillars</h2>
-          <p className="text-white/60 text-lg">The foundational principles that guide every project we undertake.</p>
+          <p className="text-white/60 text-lg font-sans">The foundational principles that guide every project we undertake.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {values.map((value) => (
-            <div key={value.title} className="space-y-6 flex flex-col items-center group">
-              <div className="p-4 bg-white/5 rounded-full border border-white/10 transition-all group-hover:scale-110 group-hover:bg-accent/10 group-hover:border-accent/40">
-                {value.icon}
+            <div key={value.title} className="space-y-5 flex flex-col items-center group">
+              <div className="p-3 bg-white/5 rounded-2xl border border-white/10 transition-all group-hover:scale-110 group-hover:bg-accent/10 group-hover:border-accent/40">
+                <div className="scale-90">
+                  {value.icon}
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-white">{value.title}</h3>
-              <p className="text-white/50 text-sm leading-relaxed max-w-[250px]">
+              <h3 className="text-xl font-bold text-white tracking-tight">{value.title}</h3>
+              <p className="text-white/50 text-sm leading-relaxed max-w-[240px]">
                 {value.desc}
               </p>
             </div>
