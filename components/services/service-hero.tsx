@@ -20,7 +20,7 @@ export default function ServiceHero({ title, subtitle, tag, bgImage }: ServiceHe
       />
 
       {/* Cinematic Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/20 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-t from-primary via-primary/20 to-transparent" />
 
       <div className="container relative z-10 mx-auto px-6 lg:px-12 text-center lg:text-left">
         <div className="max-w-4xl space-y-4">

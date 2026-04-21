@@ -67,18 +67,18 @@ export default function ProcessPage() {
     <main className="min-h-screen bg-[#fcfaf6]">
 
       {/* Hero Section */}
-      <section className="relative h-[40vh] min-h-[400px] w-full overflow-hidden flex items-center">
+      <section className="relative min-h-[70vh] w-full overflow-hidden flex items-center bg-black pt-50 pb-20">
         <Image src={bg} alt="Process Roadmap Background" fill priority className="object-cover" />
-        <div className="absolute inset-0 bg-black/70 bg-gradient-to-t from-primary/90 to-transparent" />
+        <div className="absolute inset-0 bg-black/70 bg-linear-to-t from-primary/90 to-transparent" />
         <div className="container relative z-10 mx-auto px-6 lg:px-12 text-center">
-          <div className="max-w-4xl mx-auto space-y-4">
+          <div className="mx-auto space-y-4">
             <span className="text-accent font-bold uppercase tracking-[0.3em] text-[11px] animate-in fade-in slide-in-from-bottom-5 duration-700">
               Our Blueprint
             </span>
-            <h1 className="font-heading text-4xl font-bold text-white md:text-6xl leading-tight animate-in fade-in slide-in-from-bottom-5 duration-1000 delay-200">
-              A Pro Path From <br /> <span className="text-accent italic font-medium">Concept</span> To Bestseller
+            <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight animate-in fade-in slide-in-from-bottom-5 duration-1000 delay-200">
+              A Pro Path From <span className="text-accent italic font-medium">Concept</span> To Bestseller
             </h1>
-            <p className="text-white/70 max-w-2xl mx-auto text-base md:text-lg animate-in fade-in slide-in-from-bottom-5 duration-1000 delay-500 font-sans">
+            <p className="text-white/70 max-w-6xl mx-auto text-lg md:text-xl animate-in fade-in slide-in-from-bottom-5 duration-1000 delay-500 font-sans">
               Our elite 6-step methodology combines traditional publishing quality with modern
               strategic velocity.
             </p>
@@ -97,10 +97,10 @@ export default function ProcessPage() {
               >
                 {/* Image/Visual Column - Compact */}
                 <div className="w-full lg:w-[45%]">
-                  <div className="relative aspect-[16/10] bg-white shadow-xl rounded-2xl overflow-hidden group">
+                  <div className="relative aspect-16/10 bg-white shadow-xl rounded-2xl overflow-hidden group">
                     <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/0 transition-colors duration-500" />
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-[150px] lg:text-[200px] font-black text-black/[0.03] select-none tracking-tighter">
+                      <div className="text-[150px] lg:text-[200px] font-black text-black/3 select-none tracking-tighter">
                         {step.number}
                       </div>
                     </div>

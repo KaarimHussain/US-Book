@@ -109,9 +109,9 @@ export default function Navbar() {
           ? "bg-background/95 backdrop-blur-sm border-b border-border/40 py-0"
           : "bg-transparent border-transparent py-2"
       )}>
-        <div className="container mx-auto flex h-20 items-center justify-between px-6 lg:px-12">
+        <div className="container mx-auto flex h-22 items-center justify-between px-6 lg:px-12">
           <Link href="/" className="flex items-center gap-2">
-            <Image src={scrolled ? Logo : LogoWhite} alt="Logo" width={150} priority />
+            <Image src={scrolled ? Logo : LogoWhite} alt="Logo" width={200} priority />
           </Link>
 
           {/* Desktop Navigation */}
@@ -149,7 +149,7 @@ export default function Navbar() {
                           href={item.href}
                           className="group flex flex-col gap-0.5 rounded-md p-2 transition-all bg-primary/5 hover:bg-accent border border-transparent hover:border-primary/10"
                         >
-                          <span className="text-sm font-bold transition-colors group-hover:text-black">
+                          <span className="text-md font-bold transition-colors group-hover:text-black">
                             {item.name}
                           </span>
                           <p className="text-[10.5px] leading-tight text-muted-foreground">
@@ -176,7 +176,7 @@ export default function Navbar() {
                           href={item.href}
                           className="group flex flex-col gap-1 rounded-md p-2 transition-all bg-primary/5 hover:bg-accent border border-transparent hover:border-primary/10"
                         >
-                          <span className="text-xs font-bold text-foreground transition-colors group-hover:text-black">
+                          <span className="text-md font-bold text-foreground transition-colors group-hover:text-black">
                             {item.name}
                           </span>
                           <p className="text-[9px] leading-tight text-muted-foreground/80 line-clamp-1">
@@ -203,7 +203,7 @@ export default function Navbar() {
                           href={item.href}
                           className="group flex flex-col gap-0.5 rounded-md p-2 transition-all bg-primary/5 hover:bg-accent border border-transparent hover:border-primary/10"
                         >
-                          <span className="text-sm font-bold text-foreground transition-colors group-hover:text-black">
+                          <span className="text-md font-bold text-foreground transition-colors group-hover:text-black">
                             {item.name}
                           </span>
                           <p className="text-[10.5px] leading-tight text-muted-foreground">
@@ -223,7 +223,7 @@ export default function Navbar() {
                     Services
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="left-1/2 -translate-x-1/2">
-                    <div className="grid w-[600px] grid-cols-2 gap-8 p-8">
+                    <div className="grid w-[900px] grid-cols-3 gap-8 p-8">
                       {serviceCategories.map((category) => (
                         <div key={category.title} className="flex flex-col gap-5">
                           <div className="flex items-center gap-3 text-[17px] font-light uppercase text-black flex-nowrap">
@@ -234,14 +234,14 @@ export default function Navbar() {
                             </span>
                             <div className="h-px flex-1 bg-black" />
                           </div>
-                          <div className="flex flex-col gap-2 overflow-y-auto h-[70vh]">
+                          <div className="flex flex-col gap-2 overflow-y-auto h-[50vh]">
                             {category.items.map((item) => (
                               <Link
                                 key={item.name}
                                 href={item.href}
                                 className="group flex flex-col gap-1 rounded-lg p-3 transition-all duration-200 bg-primary/5 hover:bg-accent border border-transparent hover:border-primary/10"
                               >
-                                <span className="text-sm font-bold text-foreground transition-colors group-hover:text-black">
+                                <span className="text-md font-bold text-foreground transition-colors group-hover:text-black">
                                   {item.name}
                                 </span>
                                 <p className="line-clamp-2 text-[11px] leading-relaxed text-muted-foreground">
@@ -268,32 +268,23 @@ export default function Navbar() {
                   </NavigationMenuLink>
                 </NavigationMenuItem>
 
-                <NavigationMenuItem>
-                  <NavigationMenuLink asChild>
-                    <Link href="/contact" className={cn(
-                      navigationMenuTriggerStyle(),
-                      "bg-transparent font-medium transition-all rotate-0 hover:-rotate-10",
-                      scrolled ? "text-foreground" : "text-white"
-                    )}>
-                      Contact
-                    </Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
           </div>
 
           <div className="hidden md:block">
-            <Button
-              size="lg"
-              variant={scrolled ? "secondary" : "default"}
-              className={cn(
-                "px-8 font-bold transition-all duration-300 hover:rotate-[10deg] hover:transition-transform hover:scale-110 text-white",
-                !scrolled && "bg-linear-to-l from-primary to-accent hover:from-accent hover:to-primary"
-              )}
-            >
-              Get Free Consultation
-            </Button>
+            <Link href={"/contact"}>
+              <Button
+                size="lg"
+                variant={scrolled ? "secondary" : "default"}
+                className={cn(
+                  "px-8 font-bold transition-all duration-300 hover:rotate-10 hover:transition-transform hover:scale-110 text-white",
+                  !scrolled && "bg-linear-to-l from-primary to-accent hover:from-accent hover:to-primary"
+                )}
+              >
+                Get Free Consultation
+              </Button>
+            </Link>
           </div>
 
           <button

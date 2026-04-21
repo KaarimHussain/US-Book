@@ -77,7 +77,7 @@ export default function BookWritingPage() {
               </div>
             </div>
 
-            <div className="relative aspect-square lg:aspect-[4/5] overflow-hidden">
+            <div className="relative aspect-square lg:aspect-4/5 overflow-hidden">
               <Image
                 src={writerImg}
                 alt="Book Writing Process"

@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { Button } from "../ui/button";
 
 interface StepData {
   number: string;
@@ -44,29 +45,28 @@ const defaultSteps = [
 export default function Steps({ customSteps }: { customSteps?: StepData[] }) {
   const steps = customSteps || defaultSteps;
   return (
-    <section className="bg-primary py-24 lg:py-32 overflow-hidden">
-      <div className="container mx-auto px-6 lg:px-12">
+    <section className="bg-primary py-10 lg:py-15 overflow-hidden">
+      <div>
         {/* Header */}
-        <div className="mb-20 text-center">
-          <p className="text-xs font-bold uppercase tracking-[0.4em] text-accent mb-4 font-sans">The Publishing Process</p>
+        <div className="mb-10 text-center">
+          <p className="text-xs font-bold uppercase tracking-[0.4em] text-primary-foreground/80 mb-4 font-sans">The Publishing Process</p>
           <h2 className="text-4xl font-heading font-bold tracking-tight text-primary-foreground md:text-5xl lg:text-6xl">
             Success In 6 Simple Steps
           </h2>
         </div>
 
         {/* Steps Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-0 border-t border-primary-foreground/10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-0 border-t border-primary-foreground/10">
           {defaultSteps.map((step, idx) => (
             <div
               key={idx}
               className={cn(
-                "group flex items-center py-12 border-b border-primary-foreground/10 transition-all duration-500 hover:bg-white/5 px-4",
-                idx % 2 === 0 && "md:border-r"
+                "group flex items-center py-12 border border-primary-foreground/10 transition-all duration-500 hover:bg-white/5 px-4",
               )}
             >
               {/* Number and Vertical Divider */}
               <div className="flex items-center gap-8 shrink-0">
-                <span className="text-7xl md:text-8xl lg:text-9xl font-black text-primary-foreground leading-none">
+                <span className="text-6xl md:text-7xl lg:text-8xl font-black text-primary-foreground leading-none">
                   {step.number}
                 </span>
                 <div className="h-16 w-px bg-primary-foreground/30" />
@@ -86,10 +86,10 @@ export default function Steps({ customSteps }: { customSteps?: StepData[] }) {
         </div>
 
         {/* Bottom Call to Action */}
-        <div className="mt-20 text-center">
-          <button className="px-10 py-4 bg-accent hover:bg-primary-foreground hover:text-primary transition-all duration-300 rounded-full font-bold uppercase tracking-widest text-xs text-accent-foreground">
+        <div className="mt-10 text-center">
+          <Button className="h-15 px-10 py-4 bg-accent hover:bg-primary-foreground hover:text-primary transition-all duration-300 rounded-full font-bold uppercase tracking-widest text-xs text-accent-foreground">
             Start Your Journey Now
-          </button>
+          </Button>
         </div>
       </div>
     </section>

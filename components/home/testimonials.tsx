@@ -12,7 +12,7 @@ import {
 import { books } from "@/data/books";
 import author1 from "@/app/assets/authors/amelia-james.png";
 import author2 from "@/app/assets/authors/oliver-white.png";
-import wreath from "@/app/assets/awards/wreath.png";
+import wreath from "@/app/assets/icons/Award.png";
 
 const testimonials = [
   {
@@ -62,9 +62,9 @@ export default function Testimonials() {
           <CarouselContent>
             {testimonials.map((t, idx) => (
               <CarouselItem key={idx}>
-                <div className="flex flex-col gap-8 md:flex-row md:items-stretch lg:gap-20 py-8">
+                <div className="flex flex-col gap-8 md:flex-row md:items-stretch lg:gap-20 py-8 select-none">
                   {/* Author Image */}
-                  <div className="relative h-[500px] w-full shrink-0 overflow-hidden rounded-xl shadow-2xl md:w-[450px]">
+                  <div className="relative h-[400px] w-full shrink-0 overflow-hidden rounded-xl shadow-2xl md:w-[450px]">
                     <div className="absolute left-0 top-0 z-10 bg-accent px-4 py-2 text-[12px] font-bold text-primary-foreground rounded-br-xl">
                       {t.badge}
                     </div>
@@ -82,18 +82,18 @@ export default function Testimonials() {
 
                     <div className="relative">
                       <span className="absolute -left-8 -top-8 text-8xl text-accent/10 font-serif">"</span>
-                      <p className="text-2xl italic leading-relaxed text-foreground/90 font-serif">
+                      <p className="text-xl italic leading-relaxed text-foreground/90 font-serif">
                         {t.quote}
                       </p>
                     </div>
 
                     {/* Awards Section */}
-                    <div className="space-y-6 pt-8 border-t border-border/50">
-                      <h5 className="text-xs font-black uppercase tracking-[0.1em] text-muted-foreground">Career Accolades</h5>
+                    <div className="space-y-6 pt-5 border-t border-border/50">
+                      <h5 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Career Accolades</h5>
                       <div className="flex flex-wrap gap-10">
                         {t.awards.map((award, i) => (
                           <div key={i} className="flex flex-col items-center gap-3 text-center group/award">
-                            <div className="relative h-20 w-20 transition-transform group-hover/award:scale-110 duration-500">
+                            <div className="relative h-15 w-15 transition-transform group-hover/award:scale-110 duration-500">
                               <Image src={wreath} alt="Award" fill className="object-contain grayscale group-hover/award:grayscale-0 transition-all opacity-60 group-hover/award:opacity-100" />
                             </div>
                             <span className="max-w-[80px] text-[10px] font-bold leading-tight uppercase tracking-wider">{award}</span>
@@ -109,8 +109,8 @@ export default function Testimonials() {
 
           {/* Controls - Positioned on sides */}
           <div className="hidden lg:block">
-            <CarouselPrevious className="-left-16 h-14 w-14 bg-white shadow-xl hover:bg-accent hover:text-white border-0" />
-            <CarouselNext className="-right-16 h-14 w-14 bg-white shadow-xl hover:bg-accent hover:text-white border-0" />
+            <CarouselPrevious className="-left-20 h-14 w-14 bg-white shadow-xl hover:bg-accent hover:text-white border-0" />
+            <CarouselNext className="-right-20 h-14 w-14 bg-white shadow-xl hover:bg-accent hover:text-white border-0" />
           </div>
         </Carousel>
       </div>

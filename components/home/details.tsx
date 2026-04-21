@@ -9,18 +9,15 @@ export default function Details() {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
 
-          {/* Left: Image with Funky/Professional Enhancements */}
-          <div className="relative group perspective-1000">
-            {/* Background Decorative Element */}
-            <div className="absolute -inset-4 rounded-xl bg-accent/20 -rotate-3 transition-transform duration-700 group-hover:rotate-0" />
-
-            <div className="relative aspect-square overflow-hidden rounded-xl shadow-[0_32px_64px_-16px_rgba(0,0,0,0.2)]">
+          {/* Left: Simple Image Section */}
+          <div className="relative mx-auto w-full max-w-lg">
+            <div className="relative aspect-square overflow-hidden rounded-2xl shadow-xl border border-border/50">
               <Image
                 src={writerImg}
                 alt="Professional Book Writer"
                 fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover transition-transform duration-1000 group-hover:scale-110"
+                sizes="(max-width: 1024px) 100vw, 500px"
+                className="object-cover"
               />
             </div>
           </div>
@@ -29,7 +26,7 @@ export default function Details() {
           <div className="space-y-8">
             <div className="space-y-6">
               <h2 className="text-4xl font-bold leading-tight text-foreground md:text-5xl lg:text-5.5xl">
-                Professional <span className="bg-primary px-3 text-primary-foreground">Book Writers</span> for Book Writing That Promises to Turn Your Dream into a Massively Successful Reality!
+                Professional <span className="bg-primary px-3 text-primary-foreground">Book Writers</span> to Transform Your Vision into a Bestselling Reality!
               </h2>
 
               <ul className="space-y-4 pt-2">
@@ -55,7 +52,7 @@ export default function Details() {
               <Button variant="outline" size="lg" className="h-14 px-8 font-bold uppercase tracking-wide border-2">
                 Live Chat
               </Button>
-              <Button size="lg" className="h-14 px-8 font-bold uppercase tracking-wide bg-primary/90 hover:bg-primary">
+              <Button variant={"secondary"} size="lg" className="h-14 px-8 font-bold uppercase tracking-wide text-white">
                 Call Us +1 (929) 610-6586
               </Button>
             </div>

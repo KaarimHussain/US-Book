@@ -5,9 +5,9 @@ import bg from "@/app/assets/contact-hero-bg.png"; // Unique background for proc
 
 export default function AboutMainHero() {
   return (
-    <section className="relative h-[50vh] min-h-[500px] w-full overflow-hidden flex items-center">
+    <section className="relative min-h-[70vh] w-full overflow-hidden flex items-center bg-black pt-50 pb-20">
       <Image src={bg} alt="Process Roadmap Background" fill priority className="object-cover" />
-      <div className="absolute inset-0 bg-black/70 bg-gradient-to-t from-primary/90 to-transparent" />
+      <div className="absolute inset-0 bg-black/70 bg-linear-to-t from-primary/90 to-transparent" />
       <div className="container relative z-10 mx-auto px-6 lg:px-12 text-center">
         <div className="max-w-4xl mx-auto space-y-4">
           <span className="text-accent font-bold uppercase tracking-[0.3em] text-[11px] animate-in fade-in slide-in-from-bottom-5 duration-700">

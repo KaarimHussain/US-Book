@@ -1,9 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import {
-  ArrowRight, PenTool, BookOpen, Palette, Megaphone, Share2, Globe,
+  PenTool, BookOpen, Palette, Megaphone, Share2, Globe,
   Headphones, Users, Layout, Rocket, CheckCheck, Baby, ShoppingCart
 } from "lucide-react";
 import typewriterDeco from "@/app/assets/typewriter-deco.png";
@@ -11,77 +10,92 @@ import BookSvg from "@/app/assets/book-svg.svg";
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
+// Icons
+import BookWritingIco from "@/app/assets/icons/Book-Writing.png";
+import GhostwritingIco from "@/app/assets/icons/Ghost-Writing.png";
+import BookEditingIco from "@/app/assets/icons/Book-Editing.png";
+import ProofreadingIco from "@/app/assets/icons/Proof-Reading.png";
+import BookPublishingIco from "@/app/assets/icons/Book-Publishing.png";
+import AmazonPublishingIco from "@/app/assets/icons/Amazon-Publishing.png";
+import ChildrenBookPublishingIco from "@/app/assets/icons/Childrens-Publishing.png";
+import AudiobookPublishingIco from "@/app/assets/icons/Audio-Book-Production.png";
+import GlobalDistributionIco from "@/app/assets/icons/Global-Distribution.png";
+import BookCoverDesignIco from "@/app/assets/icons/Cover-Design.png";
+import FormattingIco from "@/app/assets/icons/Interior-Formatting.png";
+import BookMarketingIco from "@/app/assets/icons/Book-Marketing.png";
+
+
 const services = [
   {
     title: "Book Writing",
     desc: "Transform your specialized knowledge or story into a professionally written book.",
-    icon: <PenTool className="size-6 text-primary" />,
+    icon: <Image src={BookWritingIco} alt="Book Writing" width={40} height={40} />,
     link: "/services/book-writing"
   },
   {
     title: "Ghostwriting",
     desc: "Your story, our words. Professional authors who capture your voice perfectly.",
-    icon: <Users className="size-6 text-primary" />,
+    icon: <Image src={GhostwritingIco} alt="Ghostwriting" width={40} height={40} />,
     link: "/services/ghostwriting"
   },
   {
     title: "Book Editing",
     desc: "From developmental editing to line editing, we polish your prose to perfection.",
-    icon: <BookOpen className="size-6 text-primary" />,
+    icon: <Image src={BookEditingIco} alt="Book Editing" width={40} height={40} />,
     link: "/services/book-editing"
   },
   {
     title: "Proofreading",
     desc: "Ensuring zero errors in spelling, grammar, and punctuation before launch.",
-    icon: <CheckCheck className="size-6 text-primary" />,
+    icon: <Image src={ProofreadingIco} alt="Proofreading" width={40} height={40} />,
     link: "/services/editing-and-proofreading"
   },
   {
     title: "Book Publishing",
     desc: "Complete guidance through the complexities of professional publishing.",
-    icon: <Rocket className="size-6 text-primary" />,
+    icon: <Image src={BookPublishingIco} alt="Book Publishing" width={40} height={40} />,
     link: "/services/book-publishing"
   },
   {
     title: "Amazon Publishing",
     desc: "Mastering KDP to ensure your book stands out on the world's largest platform.",
-    icon: <ShoppingCart className="size-6 text-primary" />,
+    icon: <Image src={AmazonPublishingIco} alt="Amazon Publishing" width={40} height={40} />,
     link: "/services/amazon-publishing"
   },
   {
     title: "Children's Publishing",
     desc: "Specialized design and publishing services for the young reader market.",
-    icon: <Baby className="size-6 text-primary" />,
+    icon: <Image src={ChildrenBookPublishingIco} alt="Children's Publishing" width={40} height={40} />,
     link: "/services/children-book-publishing"
   },
   {
     title: "Audiobook Production",
     desc: "Professional narration and technical production for top-tier audiobooks.",
-    icon: <Headphones className="size-6 text-primary" />,
+    icon: <Image src={AudiobookPublishingIco} alt="Audiobook Production" width={40} height={40} />,
     link: "/services/audiobook-publishing"
   },
   {
     title: "Global Distribution",
     desc: "Getting your book onto shelves and digital platforms around the globe.",
-    icon: <Globe className="size-6 text-primary" />,
+    icon: <Image src={GlobalDistributionIco} alt="Global Distribution" width={40} height={40} />,
     link: "/services/global-distribution"
   },
   {
     title: "Cover Design",
     desc: "Award-winning covers that grab attention and drive sales.",
-    icon: <Palette className="size-6 text-primary" />,
+    icon: <Image src={BookCoverDesignIco} alt="Book Cover Design" width={40} height={40} />,
     link: "/services/book-cover-design"
   },
   {
     title: "Interior Formatting",
     desc: "Professional layout design for print and all e-book devices.",
-    icon: <Layout className="size-6 text-primary" />,
+    icon: <Image src={FormattingIco} alt="Formatting" width={40} height={40} />,
     link: "/services/formatting"
   },
   {
     title: "Book Marketing",
     desc: "Strategic promotion to reach your target audience and bestseller lists.",
-    icon: <Megaphone className="size-6 text-primary" />,
+    icon: <Image src={BookMarketingIco} alt="Book Marketing" width={40} height={40} />,
     link: "/services/book-marketing"
   }
 ];
@@ -136,24 +150,23 @@ export default function Services() {
 
       <div className="container relative mx-auto px-6 lg:px-12">
         {/* Header */}
-        <div className="mb-16 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
-          <div className="max-w-2xl space-y-4">
-            <h2 className="text-4xl font-bold tracking-tight text-white md:text-5xl">
-              Professional Book Services <br />
-              Tailored For Every Author
+        <div className="mb-16 flex flex-col items-center justify-center gap-6 md:flex-row md:items-center">
+          <div className="space-y-4">
+            <h2 className="text-4xl font-bold tracking-tight text-white md:text-5xl text-center">
+              Professional Book Services Tailored For Every Author
             </h2>
-            <p className="text-white/60 text-lg max-w-xl">
+            <p className="text-white/60 text-lg text-center">
               From the first word to the bestseller list, we provide the elite resources you need to succeed.
             </p>
           </div>
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
           {services.map((service, idx) => (
             <div
               key={idx}
-              className="group relative flex flex-col justify-between space-y-6 bg-white p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)]"
+              className="group relative flex flex-col justify-between space-y-6 bg-white p-5 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)]"
             >
               <div className="space-y-4">
                 <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/5 transition-transform group-hover:rotate-12 group-hover:bg-primary/10">
@@ -166,13 +179,6 @@ export default function Services() {
                   {service.desc}
                 </p>
               </div>
-
-              <button className="flex items-center gap-2 text-xs font-black uppercase tracking-widest text-foreground transition-all hover:text-primary">
-                Read More
-                <div className="flex h-7 w-7 items-center justify-center rounded-full border border-border group-hover:border-primary group-hover:bg-primary/5 transition-all">
-                  <ArrowRight className="size-3 transition-transform group-hover:translate-x-1" />
-                </div>
-              </button>
             </div>
           ))}
         </div>
