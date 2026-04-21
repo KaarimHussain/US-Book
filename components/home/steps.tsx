@@ -41,7 +41,8 @@ const defaultSteps = [
   },
 ];
 
-export default function Steps() {
+export default function Steps({ customSteps }: { customSteps?: StepData[] }) {
+  const steps = customSteps || defaultSteps;
   return (
     <section className="bg-primary py-24 lg:py-32 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12">

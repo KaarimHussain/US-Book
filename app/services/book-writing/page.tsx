@@ -93,8 +93,6 @@ export default function BookWritingPage() {
       <GhostwritingFeature />
 
       <Steps
-        title="Our Masterful Writing Lifecycle"
-        subtitle="From Inspiration to Manuscript"
         customSteps={writingSteps}
       />
 
