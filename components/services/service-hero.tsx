@@ -9,7 +9,7 @@ interface ServiceHeroProps {
 
 export default function ServiceHero({ title, subtitle, tag, bgImage }: ServiceHeroProps) {
   return (
-    <section className="relative h-[50vh] min-h-[400px] w-full overflow-hidden flex items-center bg-black pt-20">
+    <section className="relative min-h-[70vh] w-full overflow-hidden flex items-center bg-black pt-50 pb-20">
       {/* Background Image */}
       <Image
         src={bgImage}

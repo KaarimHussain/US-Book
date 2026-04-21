@@ -22,22 +22,6 @@ export default function Details() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover transition-transform duration-1000 group-hover:scale-110"
               />
-
-              {/* Overlay Gradient */}
-              <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent opacity-60" />
-
-              {/* Floating Badge */}
-              <div className="absolute bottom-6 left-6 right-6 rounded-2xl bg-white/95 backdrop-blur-sm p-5 shadow-2xl border border-white/20 translate-y-2 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                <div className="flex items-center gap-4">
-                  <div className="h-10 w-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
-                    %
-                  </div>
-                  <div>
-                    <p className="text-sm font-bold text-foreground">Premium Quality</p>
-                    <p className="text-[10px] text-muted-foreground uppercase tracking-widest">Elite Book Writing</p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 

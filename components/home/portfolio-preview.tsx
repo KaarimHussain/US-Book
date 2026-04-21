@@ -11,8 +11,6 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-
-import ReadingSvg from "@/app/assets/reading-svg.svg"
 import { useEffect, useRef, useState } from "react";
 
 const categories = [
@@ -50,21 +48,9 @@ export default function PortfolioPreview() {
 
   return (
     <section ref={sectionRef} className="bg-background pt-10 lg:pt-15 overflow-hidden relative">
-      <Image 
-        src={ReadingSvg} 
-        alt={""} 
-        width={300} 
-        className={cn(
-          "absolute left-0 rotate-180 object-center object-cover h-auto hidden lg:block transition-all duration-1000 ease-out pointer-events-none",
-          isInView ? "-top-5 opacity-100" : "-top-64 opacity-0"
-        )} 
-      />
       <div className="container mx-auto px-6 lg:px-12 text-center">
         {/* Header Section */}
         <div className="mx-auto max-w-4xl space-y-6">
-          <span className="font-heading text-lg font-medium italic text-primary/80">
-            Looking For Expert Writers?
-          </span>
           <h2 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl">
             Hire A Ghostwriter For Premium Services
           </h2>

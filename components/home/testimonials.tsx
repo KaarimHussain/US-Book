@@ -39,8 +39,8 @@ export default function Testimonials() {
   return (
     <section className="bg-background py-10 lg:py-15">
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="mb-16 flex items-center justify-between">
-          <h2 className="font-heading text-4xl font-bold text-foreground">
+        <div className="mb-16 flex items-center justify-center">
+          <h2 className="font-heading text-4xl font-bold text-foreground text-center">
             Hear From Our Wise Authors
           </h2>
           <div className="hidden lg:flex gap-2">

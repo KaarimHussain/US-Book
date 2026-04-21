@@ -1,3 +1,5 @@
+"use client";
+
 import { cn } from "@/lib/utils";
 
 interface StepData {
@@ -6,79 +8,87 @@ interface StepData {
   desc: string;
 }
 
-interface StepsProps {
-  title?: string;
-  subtitle?: string;
-  customSteps?: StepData[];
-}
-
 const defaultSteps = [
   {
-    number: "01",
-    title: "Discovery",
-    desc: "Review your brand, goals, and target audience to define your author identity.",
+    number: "1",
+    title: "Sign Up",
+    desc: "Firstly, you have to register with The Publishing Genie to get started on your published author journey with expert help.",
   },
   {
-    number: "02",
-    title: "Design",
-    desc: "Create a visually compelling layout highlighting your unique style.",
+    number: "2",
+    title: "Research & Draft",
+    desc: "Secondly, our book genie will gather information and start putting your ideas on paper by drafting your book, developing your story through clear direction.",
   },
   {
-    number: "03",
-    title: "Build",
-    desc: "Develop with high-performance code and essential author integrations.",
+    number: "3",
+    title: "First Chapter",
+    desc: "Write and edit your first chapter to set the tone and interest readers with a great opening.",
   },
   {
-    number: "04",
-    title: "Launch",
-    desc: "Thorough testing and deployment with dedicated post-launch support.",
+    number: "4",
+    title: "Editing & Proofreading",
+    desc: "Read through and proofread your manuscript to get clarity, accuracy, and a clean final manuscript, professional in finish.",
+  },
+  {
+    number: "5",
+    title: "Typesetting & Designing",
+    desc: "Format your manuscript and design an attractive look that makes reading and presenting your book easy and enjoyable.",
+  },
+  {
+    number: "6",
+    title: "Publishing & Promotion",
+    desc: "Finally, our book genie will publish your book on different sites and promote your book for reaching a wider audience and getting noticed.",
   },
 ];
 
-export default function Steps({
-  title = "Our Simple Process",
-  subtitle = "Author Website Design",
-  customSteps
-}: StepsProps) {
-  const displaySteps = customSteps || defaultSteps;
-
+export default function Steps() {
   return (
-    <section className="bg-accent py-14 lg:py-20 overflow-hidden">
+    <section className="bg-primary py-24 lg:py-32 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12">
-        {/* Header - Compact */}
-        <div className="mb-12 text-center">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary-foreground/60 mb-2">{subtitle}</p>
-          <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
-            {title}
+        {/* Header */}
+        <div className="mb-20 text-center">
+          <p className="text-xs font-bold uppercase tracking-[0.4em] text-accent mb-4 font-sans">The Publishing Process</p>
+          <h2 className="text-4xl font-heading font-bold tracking-tight text-primary-foreground md:text-5xl lg:text-6xl">
+            Success In 6 Simple Steps
           </h2>
         </div>
 
-        {/* Interactive Grid with Gradients - High Contrast */}
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {displaySteps.map((step, idx) => (
+        {/* Steps Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-0 border-t border-primary-foreground/10">
+          {defaultSteps.map((step, idx) => (
             <div
               key={idx}
-              className="group relative bg-white border border-black/5 p-8 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-black/5 rounded"
+              className={cn(
+                "group flex items-center py-12 border-b border-primary-foreground/10 transition-all duration-500 hover:bg-white/5 px-4",
+                idx % 2 === 0 && "md:border-r"
+              )}
             >
-              {/* Dynamic Gradient Badge */}
-              <div className="relative mb-8 inline-block">
-                <div className="absolute inset-0 bg-linear-to-r from-accent to-primary blur-md opacity-20" />
-                <div className="relative flex h-14 w-14 items-center justify-center bg-linear-to-br from-accent to-primary text-xl font-black text-white shadow-xl transition-transform duration-500 group-hover:-rotate-12 rounded">
+              {/* Number and Vertical Divider */}
+              <div className="flex items-center gap-8 shrink-0">
+                <span className="text-7xl md:text-8xl lg:text-9xl font-black text-primary-foreground leading-none">
                   {step.number}
-                </div>
+                </span>
+                <div className="h-16 w-px bg-primary-foreground/30" />
               </div>
 
-              <h3 className="mb-4 text-xl font-black text-black transition-colors group-hover:text-primary">
-                {step.title}
-              </h3>
-              <p className="text-sm font-medium leading-relaxed text-black/60 transition-colors group-hover:text-black/80">
-                {step.desc}
-              </p>
-
-              {/* Decorative Mesh Accent */}
-              <div className="absolute -bottom-1 -right-1 h-20 w-20 bg-linear-to-br from-primary/10 to-accent/10 blur-3xl rounded-full opacity-0 transition-opacity duration-700 group-hover:opacity-100" />
+              {/* Content */}
+              <div className="pl-4 md:pl-2">
+                <h3 className="mb-3 text-xl md:text-2xl font-heading font-bold text-primary-foreground transition-all group-hover:translate-x-2">
+                  {step.title}
+                </h3>
+                <p className="text-sm md:text-base leading-relaxed text-primary-foreground/70 max-w-sm font-sans">
+                  {step.desc}
+                </p>
+              </div>
             </div>
           ))}
+        </div>
+
+        {/* Bottom Call to Action */}
+        <div className="mt-20 text-center">
+          <button className="px-10 py-4 bg-accent hover:bg-primary-foreground hover:text-primary transition-all duration-300 rounded-full font-bold uppercase tracking-widest text-xs text-accent-foreground">
+            Start Your Journey Now
+          </button>
         </div>
       </div>
     </section>

@@ -25,7 +25,7 @@ export default function PortfolioGrid() {
    const sidebarBooks = books.slice(0, 4);
 
    return (
-      <section id="portfolio-grid" className="bg-background pb-24 lg:pb-32">
+      <section id="portfolio-grid" className="bg-background pb-10 lg:pb-15">
          <div className="container mx-auto px-6 lg:px-12">
 
             {/* Main Content: Sidebar + Grid */}

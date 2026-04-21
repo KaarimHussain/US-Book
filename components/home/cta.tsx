@@ -6,7 +6,7 @@ import book3 from "@/app/assets/books/Book-3.png";
 
 export default function CTA() {
   return (
-    <section className="py-24 lg:py-32">
+    <section className="py-10 lg:py-15">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="relative overflow-hidden bg-black px-8 py-16 lg:px-20 lg:py-24">
           {/* Background Image */}

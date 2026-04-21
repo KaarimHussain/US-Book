@@ -68,7 +68,7 @@ export default function FAQ() {
           </div>
 
           {/* Illustration */}
-          <div className="relative flex aspect-square items-center justify-center lg:aspect-auto h-full">
+          <div className="relative flex aspect-square items-start justify-center lg:aspect-auto h-full">
             <Image 
               src={faqSvg} 
               alt="FAQ Illustration" 
