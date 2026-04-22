@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter, Playfair_Display } from "next/font/google";
+import { Geist, Geist_Mono, Inter, Playfair_Display, Londrina_Solid } from "next/font/google";
 import Navbar from "@/components/navbar";
 import "./globals.css";
 import { cn } from "@/lib/utils";
@@ -11,6 +11,12 @@ const playfair = Playfair_Display({
   subsets: ['latin'],
   variable: '--font-serif',
   weight: ['400', '500', '600', '700', '800', '900'],
+});
+
+const londrina = Londrina_Solid({
+  subsets: ['latin'],
+  variable: '--font-londrina',
+  weight: ['300', '400', '900'],
 });
 
 const geistSans = Geist({
@@ -43,6 +49,7 @@ export default function RootLayout({
         geistMono.variable,
         inter.variable,
         playfair.variable,
+        londrina.variable,
         "font-sans"
       )}
     >

@@ -51,7 +51,7 @@ export default function PortfolioPreview() {
       <div className="container mx-auto px-6 lg:px-12 text-center">
         {/* Header Section */}
         <div className="mx-auto space-y-6">
-          <h2 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl">
+          <h2 className="text-4xl text-primary tracking-tight md:text-5xl lg:text-6xl">
             Hire A Ghostwriter For Premium Services
           </h2>
           <p className="mx-auto text-lg leading-relaxed text-muted-foreground/90">

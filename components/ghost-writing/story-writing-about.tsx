@@ -37,7 +37,7 @@ export default function AboutSection({
                         "space-y-8 animate-in fade-in duration-1000",
                         reverse ? "slide-in-from-right-5" : "slide-in-from-left-5"
                     )}>
-                        <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary leading-tight">
+                        <h2 className="text-4xl md:text-5xl font-heading text-primary leading-tight">
                             {title}
                         </h2>
                         <div className="space-y-6 text-muted-foreground/80 leading-relaxed text-lg">
@@ -83,7 +83,7 @@ export default function AboutSection({
                         <div className="absolute -bottom-6 -right-6 w-full h-full bg-primary/10 rounded-2xl -z-10 group-hover:-bottom-8 group-hover:-right-8 transition-all duration-500 blur-[1px]" />
                         <div className="absolute -top-6 -left-6 w-32 h-32 bg-accent/10 rounded-full blur-3xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
-                        <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-white/10 glass">
+                        <div className="relative aspect-4/3 rounded-2xl overflow-hidden shadow-2xl border border-white/10 glass">
                             <Image
                                 src={image}
                                 alt="About Highlight Image"

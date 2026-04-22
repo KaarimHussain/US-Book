@@ -34,7 +34,7 @@ export default function FAQBuilder({
             <div className="container mx-auto px-6 lg:px-12">
                 {/* Header */}
                 <div className="mb-16 text-center">
-                    <h2 className="font-heading text-4xl font-bold text-foreground md:text-5xl">
+                    <h2 className="font-heading text-4xl text-foreground md:text-5xl">
                         {title}
                     </h2>
                     {description && (
@@ -54,7 +54,7 @@ export default function FAQBuilder({
                                     value={`item-${idx}`}
                                     className="border-b border-primary/20 py-2"
                                 >
-                                    <AccordionTrigger className="text-left text-base font-bold tracking-wider text-foreground hover:text-primary transition-colors hover:no-underline md:text-lg uppercase">
+                                    <AccordionTrigger className="text-left text-base font-bold font-sans text-foreground hover:text-primary transition-colors hover:no-underline md:text-lg uppercase">
                                         {faq.question}
                                     </AccordionTrigger>
                                     <AccordionContent className="text-lg leading-relaxed text-muted-foreground pb-4">

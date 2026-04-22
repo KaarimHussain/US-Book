@@ -91,8 +91,8 @@ export default function TeamPage() {
             <span className="text-accent font-bold uppercase tracking-[0.3em] text-[12px] animate-in fade-in slide-in-from-bottom-5 duration-700">
               The Visionaries
             </span>
-            <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight animate-in fade-in slide-in-from-bottom-5 duration-1000 delay-200">
-              The Architects Behind<span className="text-accent italic font-medium">Your Success</span>
+            <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl text-white leading-tight animate-in fade-in slide-in-from-bottom-5 duration-1000 delay-200">
+              The Architects Behind <span className="text-accent italic">Your Success</span>
             </h1>
             <p className="text-white/70 max-w-6xl mx-auto text-lg md:text-xl animate-in fade-in slide-in-from-bottom-5 duration-1000 delay-500 font-sans">
               Meet the collective of world-class ghostwriters, elite designers, and strategic

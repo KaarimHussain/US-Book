@@ -152,7 +152,7 @@ export default function Services() {
         {/* Header */}
         <div className="mb-16 flex flex-col items-center justify-center gap-6 md:flex-row md:items-center">
           <div className="space-y-4">
-            <h2 className="text-4xl font-bold tracking-tight text-white md:text-5xl text-center">
+            <h2 className="text-4xl tracking-tight text-white md:text-5xl text-center">
               Professional Book Services Tailored For Every Author
             </h2>
             <p className="text-white/60 text-lg text-center">
@@ -172,7 +172,7 @@ export default function Services() {
                 <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/5 transition-transform group-hover:rotate-12 group-hover:bg-primary/10">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-bold text-foreground">
+                <h3 className="text-xl text-foreground font-sans font-bold">
                   {service.title}
                 </h3>
                 <p className="text-[14px] leading-relaxed text-muted-foreground">

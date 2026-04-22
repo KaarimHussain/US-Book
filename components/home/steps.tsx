@@ -50,7 +50,7 @@ export default function Steps({ customSteps }: { customSteps?: StepData[] }) {
         {/* Header */}
         <div className="mb-10 text-center">
           <p className="text-xs font-bold uppercase tracking-[0.4em] text-primary-foreground/80 mb-4 font-sans">The Publishing Process</p>
-          <h2 className="text-4xl font-heading font-bold tracking-tight text-primary-foreground md:text-5xl lg:text-6xl">
+          <h2 className="text-4xl font-heading tracking-tight text-primary-foreground md:text-5xl lg:text-6xl">
             Success In 6 Simple Steps
           </h2>
         </div>
@@ -74,7 +74,7 @@ export default function Steps({ customSteps }: { customSteps?: StepData[] }) {
 
               {/* Content */}
               <div className="pl-4 md:pl-2">
-                <h3 className="mb-3 text-xl md:text-2xl font-heading font-bold text-primary-foreground transition-all group-hover:translate-x-2">
+                <h3 className="mb-3 text-xl md:text-2xl font-heading text-primary-foreground transition-all group-hover:translate-x-2">
                   {step.title}
                 </h3>
                 <p className="text-sm md:text-base leading-relaxed text-primary-foreground/70 max-w-sm font-sans">

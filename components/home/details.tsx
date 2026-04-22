@@ -25,7 +25,7 @@ export default function Details() {
           {/* Right: Content */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <h2 className="text-4xl font-bold leading-tight text-foreground md:text-5xl lg:text-5.5xl">
+              <h2 className="text-4xl leading-tight text-foreground md:text-5xl lg:text-5.5xl">
                 Professional <span className="bg-primary px-3 text-primary-foreground">Book Writers</span> to Transform Your Vision into a Bestselling Reality!
               </h2>
 

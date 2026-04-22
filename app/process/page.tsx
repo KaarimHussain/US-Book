@@ -75,8 +75,8 @@ export default function ProcessPage() {
             <span className="text-accent font-bold uppercase tracking-[0.3em] text-[11px] animate-in fade-in slide-in-from-bottom-5 duration-700">
               Our Blueprint
             </span>
-            <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight animate-in fade-in slide-in-from-bottom-5 duration-1000 delay-200">
-              A Pro Path From <span className="text-accent italic font-medium">Concept</span> To Bestseller
+            <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl text-white leading-tight animate-in fade-in slide-in-from-bottom-5 duration-1000 delay-200">
+              A Pro Path From <span className="text-accent italic">Concept</span> To Bestseller
             </h1>
             <p className="text-white/70 max-w-6xl mx-auto text-lg md:text-xl animate-in fade-in slide-in-from-bottom-5 duration-1000 delay-500 font-sans">
               Our elite 6-step methodology combines traditional publishing quality with modern
@@ -87,7 +87,7 @@ export default function ProcessPage() {
       </section>
 
       {/* Process Roadmap */}
-      <section className="py-20 lg:py-24">
+      <section className="py-10 lg:py-15">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="space-y-20 lg:space-y-24">
             {processSteps.map((step, idx) => (
@@ -112,7 +112,7 @@ export default function ProcessPage() {
                       </div>
                       <div className="space-y-0.5">
                         <p className="text-[10px] font-black uppercase tracking-widest text-accent">{step.highlight}</p>
-                        <h3 className="text-xl font-bold text-primary">{step.title}</h3>
+                        <h3 className="text-xl text-primary">{step.title}</h3>
                       </div>
                     </div>
                   </div>
@@ -155,21 +155,21 @@ export default function ProcessPage() {
               <div className="flex justify-center md:justify-start">
                 <ShieldCheck className="size-8 text-accent" />
               </div>
-              <h4 className="text-base font-bold">100% Confidential</h4>
+              <h4 className="text-base font-sans font-bold">100% Confidential</h4>
               <p className="text-xs leading-relaxed text-muted-foreground">Rigorous protocols to protect your identity and property.</p>
             </div>
             <div className="space-y-3">
               <div className="flex justify-center md:justify-start">
                 <Layers className="size-8 text-accent" />
               </div>
-              <h4 className="text-base font-bold">Total Authorship</h4>
+              <h4 className="text-base font-sans font-bold">Total Authorship</h4>
               <p className="text-xs leading-relaxed text-muted-foreground">You maintain all rights, royalties, and ownership.</p>
             </div>
             <div className="space-y-3">
               <div className="flex justify-center md:justify-start">
                 <Sparkles className="size-8 text-accent" />
               </div>
-              <h4 className="text-base font-bold">VIP VIP Service</h4>
+              <h4 className="text-base font-sans font-bold">VIP VIP Service</h4>
               <p className="text-xs leading-relaxed text-muted-foreground">A dedicated manager for every milestone of the journey.</p>
             </div>
           </div>

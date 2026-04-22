@@ -19,7 +19,7 @@ export default function ProcessSteps({ title, subtitle, steps }: ProcessStepsPro
             <div className="container mx-auto px-6 lg:px-12">
                 {/* Header */}
                 <div className="text-center mb-16 space-y-4">
-                    <h2 className="text-3xl md:text-5xl font-heading font-bold text-primary-foreground leading-tight">
+                    <h2 className="text-3xl md:text-5xl font-heading text-primary-foreground leading-tight">
                         {title}
                     </h2>
                     {subtitle && (
@@ -46,7 +46,7 @@ export default function ProcessSteps({ title, subtitle, steps }: ProcessStepsPro
 
                             {/* Content */}
                             <div className="space-y-4 pt-4">
-                                <h3 className="text-xl font-bold text-primary-foreground leading-tight group-hover:text-secondary transition-colors duration-300">
+                                <h3 className="text-xl text-primary-foreground leading-tight group-hover:text-secondary transition-colors duration-300">
                                     {step.title}
                                 </h3>
                                 <p className="text-[15px] leading-relaxed text-primary-foreground/80 font-medium">

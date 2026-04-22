@@ -135,6 +135,47 @@ export default function Navbar() {
                     "bg-transparent font-medium transition-all rotate-0 hover:-rotate-10",
                     scrolled ? "text-foreground" : "text-white"
                   )}>
+                    Services
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent className="left-1/2 -translate-x-1/2">
+                    <div className="grid w-[900px] grid-cols-3 gap-8 p-8">
+                      {serviceCategories.map((category) => (
+                        <div key={category.title} className="flex flex-col gap-5">
+                          <div className="flex items-center gap-3 text-[17px] font-light uppercase text-black flex-nowrap">
+                            <div className="h-px flex-1 bg-black" />
+                            <span className="flex items-center gap-2 nowrap">
+                              {category.icon}
+                              {category.title}
+                            </span>
+                            <div className="h-px flex-1 bg-black" />
+                          </div>
+                          <div className="flex flex-col gap-2 overflow-y-auto h-[50vh]">
+                            {category.items.map((item) => (
+                              <Link
+                                key={item.name}
+                                href={item.href}
+                                className="group flex flex-col gap-1 rounded-lg p-3 transition-all duration-200 bg-primary/5 hover:bg-accent border border-transparent hover:border-primary/10"
+                              >
+                                <span className="text-md font-bold text-foreground transition-colors group-hover:text-black">
+                                  {item.name}
+                                </span>
+                                <p className="line-clamp-2 text-[11px] leading-relaxed text-muted-foreground">
+                                  {item.desc}
+                                </p>
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className={cn(
+                    "bg-transparent font-medium transition-all rotate-0 hover:-rotate-10",
+                    scrolled ? "text-foreground" : "text-white"
+                  )}>
                     About Us
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="left-1/2 -translate-x-1/2">
@@ -210,47 +251,6 @@ export default function Navbar() {
                             {item.desc}
                           </p>
                         </Link>
-                      ))}
-                    </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className={cn(
-                    "bg-transparent font-medium transition-all rotate-0 hover:-rotate-10",
-                    scrolled ? "text-foreground" : "text-white"
-                  )}>
-                    Services
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent className="left-1/2 -translate-x-1/2">
-                    <div className="grid w-[900px] grid-cols-3 gap-8 p-8">
-                      {serviceCategories.map((category) => (
-                        <div key={category.title} className="flex flex-col gap-5">
-                          <div className="flex items-center gap-3 text-[17px] font-light uppercase text-black flex-nowrap">
-                            <div className="h-px flex-1 bg-black" />
-                            <span className="flex items-center gap-2 nowrap">
-                              {category.icon}
-                              {category.title}
-                            </span>
-                            <div className="h-px flex-1 bg-black" />
-                          </div>
-                          <div className="flex flex-col gap-2 overflow-y-auto h-[50vh]">
-                            {category.items.map((item) => (
-                              <Link
-                                key={item.name}
-                                href={item.href}
-                                className="group flex flex-col gap-1 rounded-lg p-3 transition-all duration-200 bg-primary/5 hover:bg-accent border border-transparent hover:border-primary/10"
-                              >
-                                <span className="text-md font-bold text-foreground transition-colors group-hover:text-black">
-                                  {item.name}
-                                </span>
-                                <p className="line-clamp-2 text-[11px] leading-relaxed text-muted-foreground">
-                                  {item.desc}
-                                </p>
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
                       ))}
                     </div>
                   </NavigationMenuContent>

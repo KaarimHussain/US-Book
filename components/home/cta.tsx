@@ -24,7 +24,7 @@ export default function CTA() {
           <div className="relative z-10 flex flex-col items-center justify-between gap-12 lg:flex-row">
             {/* Left Content */}
             <div className="max-w-xl space-y-6 text-white text-center lg:text-left">
-              <h2 className="font-heading text-3xl font-bold leading-tight md:text-4xl lg:text-5xl">
+              <h2 className="font-heading text-3xl leading-tight md:text-4xl lg:text-5xl">
                 Ready to Publish <br />
                 Your Masterpiece?
               </h2>

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const banners = [
     {
-        title: <h3 className="font-heading text-2xl font-bold leading-tight">Get Noticed With <br /> Book Publishing <br /> Services</h3>,
+        title: <h3 className="font-heading text-2xl leading-tight">Get Noticed With <br /> Book Publishing <br /> Services</h3>,
         subtitle: "From Classics to New",
         buttonText: "Lets Get Started",
         image: books[0].image,
@@ -15,7 +15,7 @@ const banners = [
         overlay: "bg-gradient-to-r from-black via-black/40 to-transparent"
     },
     {
-        title: <h3 className="font-heading text-2xl font-bold leading-tight">Smart Strategies <br /> For Marketing <br /> Your Book</h3>,
+        title: <h3 className="font-heading text-2xl leading-tight">Smart Strategies <br /> For Marketing <br /> Your Book</h3>,
         subtitle: "Chapter by Chapter",
         buttonText: "Chat With Us",
         image: books[1].image,
@@ -26,7 +26,7 @@ const banners = [
         overlay: "bg-gradient-to-r from-[#e8e2d4] via-[#e8e2d4]/40 to-transparent"
     },
     {
-        title: <h3 className="font-heading text-2xl font-bold leading-tight">Elite Authors <br /> For Your <br /> Ghostwriting</h3>,
+        title: <h3 className="font-heading text-2xl leading-tight">Elite Authors <br /> For Your <br /> Ghostwriting</h3>,
         subtitle: "Your Vision, Our Pen",
         buttonText: "Hire Expert",
         image: books[2].image,
@@ -37,7 +37,7 @@ const banners = [
         overlay: "bg-gradient-to-r from-primary via-primary/60 to-transparent"
     },
     {
-        title: <h3 className="font-heading text-2xl font-bold leading-tight">Polish Your <br /> Manuscript To <br /> Perfection</h3>,
+        title: <h3 className="font-heading text-2xl leading-tight">Polish Your <br /> Manuscript To <br /> Perfection</h3>,
         subtitle: "Editor's Choice",
         buttonText: "Get Free Review",
         image: books[3].image,

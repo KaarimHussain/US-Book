@@ -63,11 +63,11 @@ const scriptFaqs = [
 export default function ScriptWriting() {
     return (
         <main>
-            <ServiceHero 
-                title="Bring Your Cinematic Vision to Life" 
-                subtitle="Transform your ideas into professional, production-ready scripts. Our expert screenwriters craft compelling narratives with dramatic precision and industry-standard formatting for the screen and stage." 
-                tag="Cinematic Excellence" 
-                bgImage={bgImage} 
+            <ServiceHero
+                title="Bring Your Cinematic Vision to Life"
+                subtitle="Transform your ideas into professional, production-ready scripts. Our expert screenwriters craft compelling narratives with dramatic precision and industry-standard formatting for the screen and stage."
+                tag="Cinematic Excellence"
+                bgImage={bgImage}
             />
             <Brands />
             <AboutSection
@@ -134,11 +134,11 @@ export default function ScriptWriting() {
                     </p>
                 }
             />
-            <ProcessSteps 
-                title="Our Strategic Scriptwriting Workflow" 
-                steps={scriptProcess} 
+            <ProcessSteps
+                title="Our Strategic Scriptwriting Workflow"
+                steps={scriptProcess}
             />
-            <FAQBuilder 
+            <FAQBuilder
                 faqs={scriptFaqs}
                 description="We ensure your expertise reaches the influential audience it deserves through rigorous cinematic and editorial standards."
             />

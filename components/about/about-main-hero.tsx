@@ -13,7 +13,7 @@ export default function AboutMainHero() {
           <span className="text-accent font-bold uppercase tracking-[0.3em] text-[11px] animate-in fade-in slide-in-from-bottom-5 duration-700">
             US Book Authors
           </span>
-          <h1 className="font-heading text-4xl font-bold text-white md:text-6xl leading-tight animate-in fade-in slide-in-from-bottom-5 duration-1000 delay-200">
+          <h1 className="font-heading text-4xl text-white md:text-6xl leading-tight animate-in fade-in slide-in-from-bottom-5 duration-1000 delay-200">
             Your professional writing, editing
             and publishing solution!
           </h1>

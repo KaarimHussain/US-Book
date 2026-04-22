@@ -36,7 +36,7 @@ export default function PortfolioGrid() {
                {/* Sidebar: New Release */}
                <aside className="w-full shrink-0 lg:w-80">
                   <div className="rounded-t-sm bg-secondary px-6 py-4">
-                     <h4 className="font-heading text-xl font-bold text-primary-foreground">New Release</h4>
+                     <h4 className="font-heading text-xl text-primary-foreground">New Release</h4>
                   </div>
                   <div className="border border-t-0 border-border bg-white divide-y divide-border shadow-sm">
                      {sidebarBooks.map((book) => (
@@ -46,7 +46,7 @@ export default function PortfolioGrid() {
                            </div>
                            <div className="flex flex-col justify-between py-1">
                               <div>
-                                 <h5 className="text-[15px] font-bold leading-tight line-clamp-2">{book.title}</h5>
+                                 <h5 className="text-[15px] leading-tight line-clamp-2">{book.title}</h5>
                                  <p className="text-[11px] text-muted-foreground mt-1">by {book.author}</p>
                               </div>
                               <button className="text-[10px] font-bold underline decoration-accent text-accent">Read more</button>
@@ -59,7 +59,7 @@ export default function PortfolioGrid() {
                {/* Main Grid: Our Published Work */}
                <div className="flex-1 space-y-10">
                   <div className="flex items-center justify-between">
-                     <h4 className="font-heading text-3xl font-bold text-foreground">
+                     <h4 className="font-heading text-3xl text-foreground">
                         Our Published Work
                      </h4>
                      <span className="text-sm font-medium text-muted-foreground">
@@ -113,7 +113,7 @@ export default function PortfolioGrid() {
                                        ))}
                                        <span className="ml-1 text-[10px] font-bold text-muted-foreground">{book.rating.toFixed(1)}</span>
                                     </div>
-                                    <h5 className="text-[14px] font-bold leading-tight line-clamp-1">{book.title}</h5>
+                                    <h5 className="text-[14px] font-bold font-sans leading-tight line-clamp-1">{book.title}</h5>
                                     <p className="text-[11px] text-muted-foreground italic">by {book.author}</p>
                                     <Button className="w-full px-3 text-xs font-bold transition-colors">Read more</Button>
                                  </div>

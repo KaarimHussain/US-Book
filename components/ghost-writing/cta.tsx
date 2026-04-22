@@ -39,7 +39,7 @@ export default function GraphicCTA({
                     {/* Center Content */}
                     <div className="flex-1 text-center space-y-6 animate-in fade-in duration-1000 flex flex-col items-center justify-center h-[350px]">
                         <div className="space-y-3">
-                            <h2 className="text-2xl md:text-4xl lg:text-6xl font-heading font-bold text-white leading-tight">
+                            <h2 className="text-2xl md:text-4xl lg:text-6xl font-heading text-white leading-tight">
                                 {title}
                             </h2>
                             <p className="text-white/70 max-w-xl mx-auto text-xs md:text-sm leading-relaxed">
@@ -70,7 +70,7 @@ export default function GraphicCTA({
 
                     {/* Right Decoration */}
                     <div className="hidden lg:block w-1/4 animate-in fade-in duration-1000">
-                        <div className="relative aspect-[3/4]">
+                        <div className="relative aspect-3/4">
                             <Image
                                 src={imageRight}
                                 alt="Branding Illustration Right"
@@ -84,7 +84,7 @@ export default function GraphicCTA({
 
             {/* Decorative BG Texture */}
             <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-from)_0%,_transparent_70%)] from-white" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,var(--tw-gradient-from)_0%,transparent_70%)] from-white" />
             </div>
         </section>
     );
