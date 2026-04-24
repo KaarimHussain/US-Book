@@ -31,7 +31,7 @@ export default function PortfolioHero() {
           <span className="text-accent font-bold uppercase tracking-[0.3em] text-[10px] md:text-xs animate-in fade-in slide-in-from-bottom-3 duration-700">
             The Collection
           </span>
-          <h1 className="font-heading text-4xl font-bold text-white md:text-6xl lg:text-7xl leading-tight animate-in fade-in slide-in-from-bottom-5 duration-1000 delay-200">
+          <h1 className="font-heading text-4xl  text-white md:text-6xl lg:text-7xl leading-tight animate-in fade-in slide-in-from-bottom-5 duration-1000 delay-200">
             Literary <span className="text-accent italic font-medium">Excellence</span>
           </h1>
           <p className="text-white/70 max-w-6xl mx-auto text-sm md:text-xl animate-in fade-in slide-in-from-bottom-5 duration-1000 delay-500">

@@ -40,7 +40,7 @@ export default function Testimonials() {
     <section className="bg-background py-10 lg:py-15">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="mb-16 flex items-center justify-center">
-          <h2 className="font-heading text-4xl font-bold text-foreground text-center">
+          <h2 className="font-heading text-4xl text-foreground text-center">
             Hear From Our Wise Authors
           </h2>
           <div className="hidden lg:flex gap-2">
@@ -76,7 +76,7 @@ export default function Testimonials() {
                   <div className="flex flex-col justify-center space-y-10 py-6">
                     <div className="space-y-4">
                       <span className="text-[12px] font-black uppercase tracking-[0.2em] text-accent">Author Success Story</span>
-                      <h4 className="text-4xl lg:text-5xl font-bold text-foreground tracking-tight">{t.name}</h4>
+                      <h4 className="text-4xl lg:text-5xl  text-foreground tracking-tight">{t.name}</h4>
                       <p className="text-lg text-muted-foreground font-medium">{t.role}</p>
                     </div>
 

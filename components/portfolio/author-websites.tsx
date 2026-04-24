@@ -27,7 +27,7 @@ export default function AuthorWebsites() {
         <section className="bg-background py-6 overflow-hidden">
             <div className="container mx-auto px-2 lg:px-10">
                 <div className="mb-4">
-                    <h2 className="text-xl font-bold leading-tight text-foreground md:text-2xl">
+                    <h2 className="text-xl leading-tight text-foreground md:text-2xl">
                         Author Websites
                     </h2>
                 </div>

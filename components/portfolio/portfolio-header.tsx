@@ -10,7 +10,7 @@ export default function PortfolioHeader({ title, subtitle }: { title: string, su
                         <div className="h-[2px] w-12 bg-secondary" />
                     </div>
 
-                    <h2 className="text-3xl font-heading font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl leading-tight">
+                    <h2 className="text-3xl font-heading  tracking-tight text-foreground md:text-5xl lg:text-6xl leading-tight">
                         {title}
                     </h2>
 

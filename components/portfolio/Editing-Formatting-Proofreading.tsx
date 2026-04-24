@@ -19,7 +19,7 @@ export default function EditingFormattingProofreading() {
         <section className="bg-background py-10 overflow-hidden">
             <div className="container mx-auto px-2 lg:px-10">
                 <div className="mb-6 flex items-center justify-between">
-                    <h2 className="text-2xl font-bold leading-tight text-foreground md:text-3xl">
+                    <h2 className="text-2xl leading-tight text-foreground md:text-3xl">
                         Editing, Formatting & Proofreading
                     </h2>
                 </div>

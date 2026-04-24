@@ -27,7 +27,7 @@ export default function ContactForm() {
           {/* Right: Form Content (Ultra-Compact) */}
           <div className="order-1 lg:order-2 space-y-4">
             <div className="space-y-1 text-center lg:text-left">
-              <h2 className="font-heading text-2xl font-bold text-white md:text-3xl">
+              <h2 className="font-heading text-2xl text-white md:text-3xl">
                 Free Consultation
               </h2>
               <p className="text-white/60 text-[13px] max-w-sm mx-auto lg:mx-0">

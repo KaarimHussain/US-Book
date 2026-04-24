@@ -38,7 +38,7 @@ export default function FAQ() {
       <div className="container mx-auto px-6 lg:px-12">
         {/* Header */}
         <div className="mb-16 text-center">
-          <h2 className="font-heading text-4xl font-bold text-primary-foreground md:text-5xl">
+          <h2 className="font-heading text-4xl text-primary-foreground md:text-5xl">
             Frequently Asked Questions
           </h2>
           <p className="mt-4 text-primary-foreground">
