@@ -1,3 +1,7 @@
+# USBookAuthor - Company Portfolio Website
+
+This website is a company portfolio for **USBookAuthor**. It is designed to showcase our comprehensive book services, which include professional writing, editing, formatting, designing, and much more.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
